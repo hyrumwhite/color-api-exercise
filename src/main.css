@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  body {
+    background-color: Canvas;
+    color: CanvasText;
+    color-scheme: light dark;
+    display: flex;
+    flex-direction: column;
+  }
+}
