@@ -1,8 +1,10 @@
 @import 'tailwindcss';
+@import './base-styles/input.css';
 
 @layer base {
   html,
-  body {
+  body,
+  #app {
     height: 100%;
     width: 100%;
   }
@@ -10,6 +12,8 @@
     background-color: Canvas;
     color: CanvasText;
     color-scheme: light dark;
+  }
+  #app {
     display: flex;
     flex-direction: column;
   }

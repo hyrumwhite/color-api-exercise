@@ -1,0 +1,6 @@
+@layer base {
+  input {
+    border: thin solid light-dark(var(--color-zinc-700), var(--color-zinc-200));
+    border-radius: var(--radius-lg);
+  }
+}
