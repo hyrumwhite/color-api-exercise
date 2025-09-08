@@ -10,9 +10,9 @@ const { as = 'li' } = defineProps<ColorTileProps>();
 
 <template>
   <component class="flex flex-col items-center min-h-0 min-w-0" :is="as">
-    <figure>
+    <figure class="w-full">
       <div
-        class="h-56 aspect-square rounded-xl"
+        class="aspect-square rounded-xl"
         :style="{ 'background-color': color.hsl.value }"
         :aria-label="`A visual representation of the color: ${color.name.value}`"
         role="img"
