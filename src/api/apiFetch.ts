@@ -3,7 +3,7 @@ export const apiFetch = async <T>(
   options?: RequestInit & { data: object } = {},
 ) => {
   let dataString = '';
-  if (data) {
+  if (options.data) {
     dataString = JSON.stringify(data);
     options.body = dataString;
   }

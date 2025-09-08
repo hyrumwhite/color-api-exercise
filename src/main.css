@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import './base-styles/input.css';
+@import './base-styles/button.css';
 
 @layer base {
   html,
@@ -9,8 +10,8 @@
     width: 100%;
   }
   body {
-    background-color: Canvas;
-    color: CanvasText;
+    background-color: light-dark(var(--color-zinc-200), var(--color-zinc-900));
+    color: light-dark(black, white);
     color-scheme: light dark;
   }
   #app {

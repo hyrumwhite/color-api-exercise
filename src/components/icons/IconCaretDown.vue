@@ -1,0 +1,21 @@
+<script setup lang="ts">
+interface IconCaretDownProps {
+  size?: number;
+}
+const { size = 24 } = defineProps<IconCaretDownProps>();
+</script>
+
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" :height="size" :width="size" viewBox="0 0 256 256">
+    <rect width="256" height="256" fill="none" />
+    <polyline
+      points="208 96 128 176 48 96"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="16"
+    />
+  </svg>
+</template>
+<style scoped></style>
