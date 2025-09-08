@@ -1,10 +1,10 @@
 export const apiFetch = async <T>(
   request: RequestInfo | URL,
-  options?: RequestInit & { data: object } = {},
+  options: RequestInit & { data?: object } = {},
 ) => {
   let dataString = '';
   if (options.data) {
-    dataString = JSON.stringify(data);
+    dataString = JSON.stringify(options.data);
     options.body = dataString;
   }
   options.headers = {

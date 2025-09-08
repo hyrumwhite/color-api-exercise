@@ -6,7 +6,7 @@ import { useColorNamesStore } from '@/stores/colorNamesStore';
 const { colors } = storeToRefs(useColorNamesStore());
 </script>
 <template>
-  <ul class="flex flex-wrap gap-4 justify-center md:justify-start">
+  <ul class="flex flex-wrap gap-4 justify-center md:justify-start items-start min-h-0 min-w-0">
     <ColorTile v-for="color of colors" :key="color.name.value" :color />
   </ul>
 </template>

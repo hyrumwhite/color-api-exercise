@@ -7,7 +7,7 @@ import SaturationLightnessForm from '@/components/ColorExplorer/SaturationLightn
   <main class="flex flex-col flex-1 basis-0 min-h-0">
     <SaturationLightnessForm />
     <div
-      class="order-1 md:order-2 flex-1 basis-0 dark:bg-zinc-800 rounded-b-xl md:rounded-t-xl p-3 bg-white flex overflow-auto w-full"
+      class="order-1 md:order-2 flex-1 basis-0 dark:bg-zinc-800 rounded-b-xl md:rounded-t-xl p-3 bg-white flex flex-col overflow-auto w-full"
     >
       <ColorTiles />
     </div>
