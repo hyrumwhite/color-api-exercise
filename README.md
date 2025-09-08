@@ -4,10 +4,11 @@
 
 This is a vite project using Vue and Tailwind. To run it locally:
 
-1. Install Node v24 (preferably via [fnm](https://github.com/Schniz/fnm), [nvm](https://github.com/nvm-sh/nvm), or [nvm-windows](https://github.com/coreybutler/nvm-windows))
-2. In the root directory run: `npm i`
-3. Run `npm run build`
-4. Run `npm run preview`
+1. Clone this repository
+2. Install Node v24 (preferably via [fnm](https://github.com/Schniz/fnm), [nvm](https://github.com/nvm-sh/nvm), or [nvm-windows](https://github.com/coreybutler/nvm-windows))
+3. In the root directory run: `npm ci`
+4. Run `npm run build`
+5. Run `npm run preview`
 
 To run via Docker:
 
