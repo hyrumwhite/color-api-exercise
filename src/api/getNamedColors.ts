@@ -20,21 +20,9 @@ const getColorByHSL = async (hue: number, saturation: number, lightness: number)
   const lightnessString = `${lightness}%`;
   const params = new URLSearchParams({ hsl: `${hue},${saturationString},${lightnessString}` });
   const color = await getColor(params);
+  console.count('API CAllS');
   paramResponseMap.set(mapKey, color);
   return color;
-};
-
-const getSkipByDistance = (distance: number) => {
-  if (distance > 10000) {
-    return 10;
-  }
-  if (distance > 5000) {
-    return 5;
-  }
-  if (distance > 2000) {
-    return 3;
-  }
-  return 2;
 };
 
 /**
@@ -49,7 +37,8 @@ const skipForwardByDistance = async (
   lightness: number,
   color: ColorResponse,
 ) => {
-  const skip = getSkipByDistance(color.name.distance);
+  //originally tried to use name.distance as a means of determining skip, but accidentally found that just skipping 10 seemed to return the best results
+  const skip = 10;
 
   const nextHue = currentHue + skip;
   const nextColor = await getColorByHSL(nextHue, saturation, lightness);
@@ -73,7 +62,7 @@ const usedColorNames = new Set<string>();
 /**
  * An async generator function that yields colors from thecolorapi
  * @example ```
- * for await(const color of getNamedColors(100,50)) {
+ * for await(const color of getNamedColors({saturation:100,lightness:50})) {
  *    console.info(color.name.value)
  * }
  * ```
@@ -81,6 +70,7 @@ const usedColorNames = new Set<string>();
 export async function* getNamedColors(params: { saturation: number; lightness: number }) {
   usedColorNames.clear();
   paramResponseMap.clear();
+  console.countReset('API CAllS');
 
   const MAX_HUE = 360;
   try {

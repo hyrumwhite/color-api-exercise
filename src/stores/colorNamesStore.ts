@@ -33,6 +33,8 @@ export const useColorNamesStore = defineStore('color-name-store', () => {
     })) {
       if (error) {
         hasFetchColorsError.value = true;
+        selectedLightness.value = -1;
+        selectedSaturation.value = -1;
         break;
       }
       if (color) {
